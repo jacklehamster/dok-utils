@@ -67,6 +67,8 @@ class Utils {
 		    req.addEventListener('load', e => {
 				if (req.status === 200) {
 					resolve(req.response);
+				} else {
+					reject(e);
 				}
 		    });
 		    req.addEventListener('error', e => {
